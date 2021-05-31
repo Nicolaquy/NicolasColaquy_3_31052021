@@ -1,0 +1,198 @@
+/******* ./dart-sass/sass css/sass/styles.scss css/styles.css -w   *****/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/********** Loader ********/
+.sectionLoader {
+  height: 500px;
+  line-height: 500px;
+  font-size: 80px;
+  background-color: black;
+}
+.sectionLoader .loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-left-color: #99E2D0;
+  border-right-color: #99E2D0;
+  vertical-align: middle;
+  animation: spin 1s linear infinite;
+}
+.sectionLoader .loader:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  animation: spin 2s linear infinite;
+}
+.sectionLoader .loader:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*************** Header *****************/
+header {
+  box-shadow: 0 2px 3px 1px rgba(196, 196, 196, 0.541);
+  z-index: 1;
+}
+header img {
+  width: 50%;
+  padding: 20px;
+}
+
+/*************** Section Recherche *****************/
+.recherche {
+  background-color: #F2F2F2;
+  padding-bottom: 50px;
+}
+.recherche .inputSearch {
+  background-color: #ebe5e5;
+  padding: 20px;
+}
+.recherche .inputSearch input {
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+}
+.recherche p {
+  margin: 20px 0;
+}
+.recherche a {
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  color: white;
+  box-shadow: 2px 4px 3px 1px rgba(196, 196, 196, 0.541);
+}
+
+/*************** Fonctionnement *****************/
+.fonctionnement h2 {
+  text-align: left;
+  margin-left: 30px;
+}
+.fonctionnement li {
+  padding: 15px;
+  margin: 15px 40px;
+  text-align: left;
+  background-color: #F2F2F2;
+  border: #F2F2F2;
+  border-radius: 15px;
+  box-shadow: 2px 3px 4px 1px rgba(196, 196, 196, 0.541);
+}
+.fonctionnement li i {
+  margin: 0 20px;
+}
+
+/*************** Restaurants *****************/
+#restaurants {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+#restaurants h2 {
+  text-align: left;
+  margin: 40px 0 20px 25px;
+}
+#restaurants .banImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#restaurants .resto {
+  background-color: #fff;
+  margin: 10px 25px;
+  border-radius: 25px;
+  box-shadow: 3px 4px 3px 1px rgba(196, 196, 196, 0.541);
+}
+#restaurants .resto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+#restaurants .resto h4 {
+  margin: 5px 0 5px 15px;
+  text-align: left;
+}
+#restaurants .resto p {
+  margin: 5px 0 15px 15px;
+  text-align: left;
+  color: #686868;
+}
+#restaurants .resto i {
+  font-size: 20px;
+  margin: 20px 20px;
+}
+
+/*************** Footer *****************/
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 30px 25px;
+}
+footer li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+footer li a, footer li i {
+  color: white;
+}
+footer li i {
+  margin-right: 10px;
+}
+footer li .fa-hands-helping {
+  font-size: 9px;
+}
+footer .logo {
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=styles.css.map */
