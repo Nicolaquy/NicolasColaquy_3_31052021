@@ -1,0 +1,178 @@
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$bouton: linear-gradient(175deg, $secondary, $primary );
+
+/****** Loader *****/
+
+@mixin loader {
+    .loader {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border-radius: 100px;
+        border: 3px solid transparent;
+        border-left-color: #99E2D0;
+        border-right-color: #99E2D0;
+        vertical-align: middle;
+        animation: spin 1s linear infinite, fadeOut 5s forwards;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 20px; left: 20px;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 100px;
+            border: 3px solid transparent;
+            border-top-color: #FF79DA;
+            border-bottom-color: #FF79DA;
+            animation: spin 2s linear infinite, fadeOut 5s forwards;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -20px; left: -20px;
+            bottom: -20px;
+            right: -20px;
+            border-radius: 100px;
+            border: 3px solid transparent;
+            border-top-color: #9356DC;
+            border-bottom-color: #9356DC;
+            animation: spin 1s linear infinite, fadeOut 5s forwards;
+        }
+    }
+
+    @keyframes spin{
+        0% { transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    
+    @keyframes fadeOut {
+        from {
+            opacity:1;
+        }
+        to {
+            opacity:0;
+        }
+        }
+}
+
+@mixin loadPage {
+    opacity: 0.0;
+    animation: fadein 1.5s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+            }
+        
+}
+
+/********* Fonctionnement *********/
+
+@mixin fonctionnement {
+    background-color: #9256dc2f;
+    cursor: pointer;
+    transition: 0.3s;
+
+    i {
+        color: $primary;
+    }
+}
+
+
+/******** Boutons + Coeurs **********/
+@mixin button {
+    transition: 0.3s;
+    background: linear-gradient(165deg, #f88fda, #a979e4 );
+    box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
+}
+
+@mixin coeur {
+    font-weight: bold;
+    color: $secondary;
+    transition: 0.6s ease-in-out;
+
+}
+
+
+/******** Dégradé Menus ********/
+
+@mixin fade {
+    .une {
+        animation: fadein 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 200ms;
+    }
+    
+    .deux {
+       
+        animation: fadein 1.5s;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+    }
+    .trois {
+    
+        animation: fadein 1.5s;
+        animation-delay: 800ms;
+        animation-fill-mode: forwards;
+    }
+    
+    
+    @keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+    }
+}
+
+/****** CheckMenu *******/
+
+
+
+@mixin check {
+    
+    .prixCheck {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        transition:  350ms ease-out;
+
+
+        .check {
+            color: black;
+            position: absolute;
+            left: 80px;
+            bottom: -15px;
+            height: 60px;
+            padding: 28px 25px 25px 25px;
+            background-color: #99E2D0;
+            margin-left: -20px;
+            
+            
+
+            .fa-check {
+                background-color: white;
+                padding: 5px;
+                border-radius: 20px;
+                margin-top: 25px;
+            
+            }
+        
+        }
+
+    }
+
+}

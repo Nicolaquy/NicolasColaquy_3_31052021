@@ -1,6 +1,7 @@
 /****** ./dart-sass/sass css/sass/menu.scss css/menu.css -w ******/
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import "animations.scss";
 
 * {
     padding: 0;
@@ -41,10 +42,12 @@ header {
 /******** Image ********/
 
 .imgResto {
+
     img{
-    width: 100%;
-    object-fit: cover;
-    height: 320px;
+        width: 100%;
+        object-fit: cover;
+        height: 320px;
+        margin-bottom: -40px;
     }
 }
 
@@ -52,12 +55,9 @@ header {
 /*********** Menus ***********/
 
 .menu {
-    background: #F2F2F2;
+    background: #f2f2f2;
     padding: 0px;
     border-radius: 40px 40px 0 0;
-    position: absolute;
-    z-index: 1;
-    margin-top: -70px;
     padding-bottom: 40px;
     width: 100%;
 
@@ -73,18 +73,29 @@ header {
         i {
             font-size: 28px;
             margin-top: 10px;
+
+            &:hover {
+                @include coeur;
+                cursor: pointer;
+            }
         }
     }
 
+   
+ 
     .entree, .plat, .dessert {
         margin: 15px 20px;
         display: flex;
+        height: 60px;
         flex-direction: row;
         justify-content: space-between;
         background-color: white;
         padding: 14px 10px;
         border-radius: 14px;
         box-shadow: 2px 3px 4px 1px rgba(196, 196, 196, 0.541);
+        opacity: 0;
+        overflow: hidden;
+        cursor: pointer;
     
         h4 {
             margin-bottom: 8px;
@@ -97,10 +108,27 @@ header {
        }
 
         .prix {
-             margin: 25px 15px 0 5px;
+             padding: 25px 5px 0 5px;
+             background-color: white
        }
+
+       @include check;
     }
 }
+
+.entree:hover, .plat:hover, .dessert:hover {
+    .prixCheck{
+        transform:translateX(-84px);
+
+        .fa-check {
+            transform: rotate(360deg);
+            transition:  400ms ease-out 100ms;
+    
+        }
+    }
+}
+
+@include fade;
 
 .entrees, .plats, .desserts {
     margin-bottom: 40px;
@@ -118,10 +146,14 @@ header {
         width: 30%;
         margin: 20px auto;
         border-radius: 25px;
-        background: linear-gradient(#FF79DA, #9356DC );
+        background: $bouton;
         border: none;
         color: white;
         box-shadow: 2px 4px 3px 1px rgba(196, 196, 196, 0.541);
+
+        &:hover {
+            @include button;
+        }
     }
 }
 
@@ -133,10 +165,6 @@ footer {
     background-color: rgb(53, 53, 53);
     color: white;
     padding: 30px 25px;
-    position: relative;
-    top: 1200px;
-    z-index: 2;
-
 
     li {
         text-align: left;
@@ -158,3 +186,5 @@ footer {
         font-size: 18px;
     }
 }
+
+

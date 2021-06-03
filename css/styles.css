@@ -1,6 +1,11 @@
+@charset "UTF-8";
 /******* ./dart-sass/sass css/sass/styles.scss css/styles.css -w   *****/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+/****** Loader *****/
+/********* Fonctionnement *********/
+/******** Boutons + Coeurs **********/
+/******** Dégradé Menus ********/
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +20,21 @@ body {
   text-align: center;
 }
 
+.content {
+  opacity: 0;
+  animation: fadein 1.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 h2 {
   font-size: 20px;
   margin-top: 30px;
@@ -22,10 +42,10 @@ h2 {
 
 /********** Loader ********/
 .sectionLoader {
-  height: 500px;
-  line-height: 500px;
-  font-size: 80px;
-  background-color: black;
+  height: 100%;
+  width: 100%;
+  margin: 300px auto;
+  position: absolute;
 }
 .sectionLoader .loader {
   position: relative;
@@ -37,7 +57,7 @@ h2 {
   border-left-color: #99E2D0;
   border-right-color: #99E2D0;
   vertical-align: middle;
-  animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite, fadeOut 5s forwards;
 }
 .sectionLoader .loader:after {
   content: "";
@@ -50,7 +70,7 @@ h2 {
   border: 3px solid transparent;
   border-top-color: #FF79DA;
   border-bottom-color: #FF79DA;
-  animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite, fadeOut 5s forwards;
 }
 .sectionLoader .loader:before {
   content: "";
@@ -63,7 +83,7 @@ h2 {
   border: 3px solid transparent;
   border-top-color: #9356DC;
   border-bottom-color: #9356DC;
-  animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite, fadeOut 5s forwards;
 }
 @keyframes spin {
   0% {
@@ -73,15 +93,26 @@ h2 {
     transform: rotate(360deg);
   }
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 /*************** Header *****************/
 header {
   box-shadow: 0 2px 3px 1px rgba(196, 196, 196, 0.541);
-  z-index: 1;
+  display: flex;
+  flex-direction: row;
 }
 header img {
+  margin: 0 auto;
   width: 50%;
-  padding: 20px;
+  max-width: 200px;
+  padding: 14px;
 }
 
 /*************** Section Recherche *****************/
@@ -92,11 +123,17 @@ header img {
 .recherche .inputSearch {
   background-color: #ebe5e5;
   padding: 20px;
+  font-size: 20px;
+  padding-left: 70px;
 }
 .recherche .inputSearch input {
   border: 0;
   background-color: transparent;
   font-size: 20px;
+  margin-left: 20px;
+}
+.recherche .inputSearch input:focus {
+  outline-style: none;
 }
 .recherche p {
   margin: 20px 0;
@@ -104,20 +141,29 @@ header img {
 .recherche a {
   padding: 10px;
   border-radius: 20px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   border: none;
   color: white;
   box-shadow: 2px 4px 3px 1px rgba(196, 196, 196, 0.541);
 }
+.recherche a:hover {
+  transition: 0.3s;
+  background: linear-gradient(165deg, #f88fda, #a979e4);
+  box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
+}
 
 /*************** Fonctionnement *****************/
+.fonctionnement {
+  padding: 0 20px 40px 20px;
+}
 .fonctionnement h2 {
   text-align: left;
   margin-left: 30px;
 }
 .fonctionnement li {
-  padding: 15px;
-  margin: 15px 40px;
+  padding: 20px;
+  position: relative;
+  margin: 20px;
   text-align: left;
   background-color: #F2F2F2;
   border: #F2F2F2;
@@ -127,13 +173,30 @@ header img {
 .fonctionnement li i {
   margin: 0 20px;
 }
+.fonctionnement li .numero {
+  position: absolute;
+  top: 15px;
+  left: -14px;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.fonctionnement li:hover {
+  background-color: #9256dc2f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.fonctionnement li:hover i {
+  color: #9356DC;
+}
 
 /*************** Restaurants *****************/
 #restaurants {
   background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 #restaurants h2 {
   text-align: left;
@@ -145,6 +208,7 @@ header img {
   justify-content: space-between;
 }
 #restaurants .resto {
+  position: relative;
   background-color: #fff;
   margin: 10px 25px;
   border-radius: 25px;
@@ -168,6 +232,19 @@ header img {
 #restaurants .resto i {
   font-size: 20px;
   margin: 20px 20px;
+}
+#restaurants .resto i:hover {
+  font-weight: bold;
+  color: #FF79DA;
+  transition: 0.6s ease-in-out;
+}
+#restaurants .resto .new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  padding: 5px 12px;
+  border-radius: 3px;
 }
 
 /*************** Footer *****************/
