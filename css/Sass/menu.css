@@ -100,6 +100,12 @@ header .fa-arrow-left {
   cursor: pointer;
 }
 
+.menu h3 {
+  width: 50px;
+  padding-bottom: 7px;
+  border-bottom: #99E2D0 3px solid;
+}
+
 .menu .entree, .menu .plat, .menu .dessert {
   margin: 15px 20px;
   display: -webkit-box;
@@ -123,6 +129,12 @@ header .fa-arrow-left {
   cursor: pointer;
 }
 
+.menu .entree .textMenu, .menu .plat .textMenu, .menu .dessert .textMenu {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .menu .entree h4, .menu .plat h4, .menu .dessert h4 {
   margin-bottom: 8px;
   font-size: 18px;
@@ -131,10 +143,13 @@ header .fa-arrow-left {
 
 .menu .entree p, .menu .plat p, .menu .dessert p {
   color: #686868;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .entree .prix, .menu .plat .prix, .menu .dessert .prix {
-  padding: 30px 5px 0 5px;
+  padding: 30px 5px 0 15px;
 }
 
 .menu .entree .prixCheck, .menu .plat .prixCheck, .menu .dessert .prixCheck {
@@ -169,8 +184,8 @@ header .fa-arrow-left {
 }
 
 .entree:hover .prixCheck, .plat:hover .prixCheck, .dessert:hover .prixCheck {
-  -webkit-transform: translateX(-84px);
-          transform: translateX(-84px);
+  -webkit-transform: translateX(-72px);
+          transform: translateX(-72px);
 }
 
 .entree:hover .prixCheck .fa-check, .plat:hover .prixCheck .fa-check, .dessert:hover .prixCheck .fa-check {

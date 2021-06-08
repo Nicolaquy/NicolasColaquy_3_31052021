@@ -85,6 +85,11 @@ header {
         }
     }
 
+    h3 {
+        width: 50px;
+        padding-bottom: 7px;
+        border-bottom: #99E2D0 3px solid;
+    }
    
  
     .entree, .plat, .dessert {
@@ -100,6 +105,12 @@ header {
         opacity: 0;
         overflow: hidden;
         cursor: pointer;
+        
+        .textMenu {
+            white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis;
+        }
     
         h4 {
             margin-bottom: 8px;
@@ -109,20 +120,24 @@ header {
 
        p {
            color: rgb(104, 104, 104);
-           
+           white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis; 
        }
 
         .prix {
-             padding: 30px 5px 0 5px;
+             padding: 30px 5px 0 15px;
        }
 
        @include check;
     }
 }
 
+
 .entree:hover, .plat:hover, .dessert:hover {
+
     .prixCheck{
-        transform:translateX(-84px);
+        transform:translateX(-72px);
 
         .fa-check {
             transform: rotate(360deg);
@@ -130,6 +145,7 @@ header {
     
         }
     }
+
 }
 
 @include fade;
