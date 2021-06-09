@@ -107,15 +107,18 @@ header {
         cursor: pointer;
         
         .textMenu {
-            white-space: nowrap;
-           overflow: hidden;
-           text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+            transition: width 400ms ease-out;
         }
     
         h4 {
             margin-bottom: 8px;
             font-size: 18px;
             font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
        }
 
        p {
@@ -126,7 +129,7 @@ header {
        }
 
         .prix {
-             padding: 30px 5px 0 15px;
+             padding: 30px 0 0 15px;
        }
 
        @include check;
@@ -137,13 +140,17 @@ header {
 .entree:hover, .plat:hover, .dessert:hover {
 
     .prixCheck{
-        transform:translateX(-72px);
-
+        transform:translateX(-80px);
+        
         .fa-check {
             transform: rotate(360deg);
             transition:  400ms ease-out 100ms;
     
         }
+    }
+
+    .textMenu {
+        width: calc(100% - 130px);
     }
 
 }

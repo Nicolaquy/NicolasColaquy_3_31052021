@@ -130,15 +130,19 @@ header .fa-arrow-left {
 }
 
 .menu .entree .textMenu, .menu .plat .textMenu, .menu .dessert .textMenu {
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  width: 100%;
+  -webkit-transition: width 400ms ease-out;
+  transition: width 400ms ease-out;
 }
 
 .menu .entree h4, .menu .plat h4, .menu .dessert h4 {
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .entree p, .menu .plat p, .menu .dessert p {
@@ -149,7 +153,7 @@ header .fa-arrow-left {
 }
 
 .menu .entree .prix, .menu .plat .prix, .menu .dessert .prix {
-  padding: 30px 5px 0 15px;
+  padding: 30px 0 0 15px;
 }
 
 .menu .entree .prixCheck, .menu .plat .prixCheck, .menu .dessert .prixCheck {
@@ -184,8 +188,8 @@ header .fa-arrow-left {
 }
 
 .entree:hover .prixCheck, .plat:hover .prixCheck, .dessert:hover .prixCheck {
-  -webkit-transform: translateX(-72px);
-          transform: translateX(-72px);
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
 }
 
 .entree:hover .prixCheck .fa-check, .plat:hover .prixCheck .fa-check, .dessert:hover .prixCheck .fa-check {
@@ -193,6 +197,10 @@ header .fa-arrow-left {
           transform: rotate(360deg);
   -webkit-transition: 400ms ease-out 100ms;
   transition: 400ms ease-out 100ms;
+}
+
+.entree:hover .textMenu, .plat:hover .textMenu, .dessert:hover .textMenu {
+  width: calc(100% - 130px);
 }
 
 .une {

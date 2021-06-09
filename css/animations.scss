@@ -148,7 +148,7 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
         position: relative;
         display: flex;
         flex-direction: row;
-        transition:  350ms ease-out;
+        transition: 350ms ease-out;
 
 
         .check {
@@ -174,5 +174,7 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
         }
 
     }
+
+    
 
 }
