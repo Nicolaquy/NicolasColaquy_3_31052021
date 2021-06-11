@@ -37,7 +37,10 @@ h2 {
     position: absolute;
 
     @include loader;
+    
+    
 }
+
 
 /*************** Header *****************/
 
@@ -177,7 +180,7 @@ header {
         border-radius: 25px;
         box-shadow: 3px 4px 3px 1px rgba(196, 196, 196, 0.541);
         
-        img {
+        .photoResto {
             width: 100%;
             height: 200px;
             object-fit: cover;
@@ -197,11 +200,25 @@ header {
         i {
             font-size: 30px;
             margin: 20px 20px;
+        }
 
+        .banImg {
+            position: relative;
 
-            &:hover{
-                @include coeur;
-                
+            .like {
+                position: absolute;
+                height: 31px;
+                right: 18px;
+                top: 19px;
+                opacity: 0;
+                filter: saturate(120%) contrast(120%);
+                transition: 0.4s ease-in-out;
+            
+                &:hover {
+                    /** @include coeur; **/
+                    cursor: pointer;
+                    opacity: 1;
+                }
             }
         }
 
@@ -218,13 +235,14 @@ header {
 
 }
 
+
+
 /*************** Footer *****************/
 
 footer {
     background-color: rgb(53, 53, 53);
     color: white;
     padding: 30px 25px 50px 25px;
-
 
     li {
         text-align: left;

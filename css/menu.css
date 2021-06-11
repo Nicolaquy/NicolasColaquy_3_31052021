@@ -83,6 +83,7 @@ header .fa-arrow-left {
   margin: 20px 0 30px 10px;
   font-family: 'Shrikhand', cursive;
   font-size: 18px;
+  position: relative;
   padding: 40px 20px 20px 20px;
   letter-spacing: 0.1rem;
 }
@@ -92,12 +93,21 @@ header .fa-arrow-left {
   margin-top: 10px;
 }
 
-.menu .nomResto i:hover {
-  font-weight: bold;
-  color: #FF79DA;
-  -webkit-transition: 0.6s ease-in-out;
-  transition: 0.6s ease-in-out;
+.menu .nomResto .like {
+  position: absolute;
+  height: 28px;
+  right: 20px;
+  top: 49px;
+  opacity: 0;
+  -webkit-filter: saturate(120%) contrast(120%);
+          filter: saturate(120%) contrast(120%);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.menu .nomResto .like:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 .menu h3 {
@@ -120,7 +130,7 @@ header .fa-arrow-left {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: white;
-  padding: 14px 10px;
+  padding: 10px 13px;
   border-radius: 14px;
   -webkit-box-shadow: 2px 3px 4px 1px rgba(196, 196, 196, 0.541);
           box-shadow: 2px 3px 4px 1px rgba(196, 196, 196, 0.541);
@@ -188,8 +198,8 @@ header .fa-arrow-left {
 }
 
 .entree:hover .prixCheck, .plat:hover .prixCheck, .dessert:hover .prixCheck {
-  -webkit-transform: translateX(-80px);
-          transform: translateX(-80px);
+  -webkit-transform: translateX(-76px);
+          transform: translateX(-76px);
 }
 
 .entree:hover .prixCheck .fa-check, .plat:hover .prixCheck .fa-check, .dessert:hover .prixCheck .fa-check {
@@ -264,7 +274,7 @@ header .fa-arrow-left {
 
 .commander a {
   text-align: center;
-  padding: 16px;
+  padding: 16px 35px;
   width: 30%;
   margin: 40px auto;
   border-radius: 25px;
@@ -278,7 +288,7 @@ header .fa-arrow-left {
 .commander a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: linear-gradient(165deg, #f88fda, #a979e4);
+  background: linear-gradient(175deg, #f88fda, #a979e4);
   -webkit-box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
           box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
 }

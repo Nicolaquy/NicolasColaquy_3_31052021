@@ -64,7 +64,7 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
 @mixin loadPage {
     opacity: 0.0;
     animation: fadein 1.5s;
-        animation-delay: 2s;
+        animation-delay: 3s;
         animation-fill-mode: forwards;
         @keyframes fadein {
             from {
@@ -93,16 +93,10 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
 /******** Boutons + Coeurs **********/
 @mixin button {
     transition: 0.3s;
-    background: linear-gradient(165deg, #f88fda, #a979e4 );
+    background: linear-gradient(175deg, #f88fda, #a979e4 );
     box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
 }
 
-@mixin coeur {
-    font-weight: bold;
-    color: $secondary;
-    transition: 0.6s ease-in-out;
-
-}
 
 
 /******** Dégradé Menus ********/
