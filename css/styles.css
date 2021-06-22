@@ -303,6 +303,7 @@ header img {
   max-width: 550px;
   margin: 10px auto;
   border-radius: 25px;
+  height: 290px;
   -webkit-box-shadow: 3px 4px 3px 1px rgba(196, 196, 196, 0.541);
           box-shadow: 3px 4px 3px 1px rgba(196, 196, 196, 0.541);
 }
@@ -421,6 +422,10 @@ footer .logo {
   }
   #restaurants .resto {
     max-width: 45%;
+    height: 350px;
+  }
+  #restaurants .resto .photoResto {
+    height: 250px;
   }
   #restaurants .nouveau {
     margin: 120px auto 30px auto;

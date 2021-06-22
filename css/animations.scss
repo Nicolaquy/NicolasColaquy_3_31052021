@@ -14,8 +14,8 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
         display: inline-block;
         border-radius: 100px;
         border: 3px solid transparent;
-        border-left-color: #99E2D0;
-        border-right-color: #99E2D0;
+        border-left-color: $tertiary;
+        border-right-color: $tertiary;
         vertical-align: middle;
         animation: spin 1s linear infinite, fadeOut 5s forwards;
 
@@ -27,8 +27,8 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
             right: 20px;
             border-radius: 100px;
             border: 3px solid transparent;
-            border-top-color: #FF79DA;
-            border-bottom-color: #FF79DA;
+            border-top-color: $secondary;
+            border-bottom-color: $secondary;
             animation: spin 2s linear infinite, fadeOut 5s forwards;
         }
 
@@ -40,8 +40,8 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
             right: -20px;
             border-radius: 100px;
             border: 3px solid transparent;
-            border-top-color: #9356DC;
-            border-bottom-color: #9356DC;
+            border-top-color: $primary;
+            border-bottom-color: $primary;
             animation: spin 1s linear infinite, fadeOut 5s forwards;
         }
     }
@@ -152,7 +152,7 @@ $bouton: linear-gradient(175deg, $secondary, $primary );
             bottom: -15px;
             height: 60px;
             padding: 28px 25px 25px 25px;
-            background-color: #99E2D0;
+            background-color: $tertiary;
             margin-left: -20px;
             
             
