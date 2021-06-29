@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/******* ./dart-sass/sass css/sass/styles.scss css/styles.css -w   *****/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+/****** Loader *****/
+/********* Fonctionnement *********/
+/******** Boutons + Coeurs **********/
+/******** Dégradé Menus ********/
+/****** CheckMenu *******/
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/**
+.content {
+    @include loadPage
+}**/
+h2 {
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+/********** Loader ********/
+/**
+.sectionLoader {
+    height: 100%;
+    width: 100%;
+    margin: 300px auto;
+    position: absolute;
+
+    @include loader;
+    
+    
+}**/
+/*************** Header *****************/
+header {
+  -webkit-box-shadow: 0 2px 3px 1px rgba(196, 196, 196, 0.541);
+          box-shadow: 0 2px 3px 1px rgba(196, 196, 196, 0.541);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 20px;
+}
+
+header img {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 200px;
+}
+
+/*************** Section Recherche *****************/
+.recherche {
+  background-color: #F2F2F2;
+  padding-bottom: 80px;
+}
+
+.recherche .inputSearch {
+  background-color: #ebe5e5;
+  padding: 16px 0 16px 60px;
+  font-size: 20px;
+}
+
+.recherche .inputSearch input {
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.recherche .inputSearch input:focus {
+  outline-style: none;
+}
+
+.recherche h2 {
+  margin: 45px 60px 20px 60px;
+}
+
+.recherche p {
+  margin: 20px 10px 50px 10px;
+}
+
+.recherche a {
+  padding: 18px 28px;
+  border-radius: 60px;
+  font-size: 16px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  border: none;
+  color: white;
+  -webkit-box-shadow: 2px 4px 3px 1px rgba(196, 196, 196, 0.541);
+          box-shadow: 2px 4px 3px 1px rgba(196, 196, 196, 0.541);
+}
+
+.recherche a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: linear-gradient(175deg, #f88fda, #a979e4);
+  -webkit-box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
+          box-shadow: 3px 4px 3px 1px rgba(153, 153, 153, 0.541);
+}
+
+/*************** Fonctionnement *****************/
+.fonctionnement {
+  padding: 20px 20px 60px 20px;
+}
+
+.fonctionnement h2 {
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.fonctionnement li {
+  padding: 30px 20px;
+  position: relative;
+  max-width: 500px;
+  margin: 25px auto;
+  text-align: left;
+  background-color: #F2F2F2;
+  border: #F2F2F2;
+  border-radius: 22px;
+  -webkit-box-shadow: 2px 3px 4px 1px rgba(196, 196, 196, 0.541);
+          box-shadow: 2px 3px 4px 1px rgba(196, 196, 196, 0.541);
+}
+
+.fonctionnement li i {
+  margin: 0 20px;
+}
+
+.fonctionnement li .numero {
+  position: absolute;
+  top: 25px;
+  left: -14px;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.fonctionnement li:hover {
+  background-color: #9256dc2f;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.fonctionnement li:hover i {
+  color: #9356DC;
+}
+
+/*************** Restaurants *****************/
+#restaurants {
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 20px 60px 20px;
+}
+
+#restaurants h2 {
+  text-align: left;
+  margin: 50px 0 20px 25px;
+}
+
+#restaurants .banImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+}
+
+#restaurants .resto {
+  position: relative;
+  background-color: #fff;
+  max-width: 550px;
+  margin: 10px auto;
+  border-radius: 25px;
+  height: 290px;
+  -webkit-box-shadow: 3px 4px 3px 1px rgba(196, 196, 196, 0.541);
+          box-shadow: 3px 4px 3px 1px rgba(196, 196, 196, 0.541);
+}
+
+#restaurants .resto .photoResto {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+#restaurants .resto h4 {
+  margin: 15px 0 5px 15px;
+  text-align: left;
+}
+
+#restaurants .resto p {
+  margin: 5px 0 15px 15px;
+  text-align: left;
+  color: #686868;
+}
+
+#restaurants .resto i {
+  font-size: 28.6px;
+  position: absolute;
+  right: 19.5px;
+  top: 26px;
+}
+
+#restaurants .resto .banImg {
+  position: relative;
+}
+
+#restaurants .resto .banImg .like {
+  position: absolute;
+  height: 28px;
+  width: 31px;
+  right: 18px;
+  top: 25px;
+  opacity: 0;
+  -webkit-filter: saturate(120%) contrast(120%);
+          filter: saturate(120%) contrast(120%);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+#restaurants .resto .banImg .like:hover {
+  /** @include coeur; **/
+  cursor: pointer;
+  opacity: 1;
+}
+
+#restaurants .resto .new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
+/*************** Footer *****************/
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 30px 25px 50px 25px;
+}
+
+footer li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+footer li a, footer li i {
+  color: white;
+}
+
+footer li i {
+  margin-right: 10px;
+}
+
+footer li .fa-hands-helping {
+  font-size: 9px;
+}
+
+footer .logo {
+  font-family: 'Shrikhand', cursive;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/******* Version tablette ********/
+@media only screen and (min-width: 700px) {
+  .fonctionnement h2 {
+    margin-left: 10%;
+  }
+  #restaurants h2 {
+    margin-left: 10%;
+  }
+}
+
+/************ version Laptop ********/
+@media only screen and (min-width: 1000px) {
+  .fonctionnement li {
+    max-width: 700px;
+  }
+  #restaurants {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #restaurants h2 {
+    position: absolute;
+  }
+  #restaurants .resto {
+    max-width: 45%;
+    height: 350px;
+  }
+  #restaurants .resto .photoResto {
+    height: 250px;
+  }
+  #restaurants .nouveau {
+    margin: 120px auto 30px auto;
+  }
+  footer {
+    padding: 20px 15px 20px 15px;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px 50px 0 50px;
+  }
+  footer ul .logo {
+    font-size: 25px;
+    margin-top: -8px;
+  }
+  footer ul .fa-hands-helping {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
