@@ -21,27 +21,131 @@ body {
   text-align: center;
 }
 
-/**
 .content {
-    @include loadPage
-}**/
+  opacity: 0.0;
+  -webkit-animation: fadein 1.5s;
+          animation: fadein 1.5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 h2 {
   font-size: 28px;
   margin-top: 30px;
 }
 
 /********** Loader ********/
-/**
 .sectionLoader {
-    height: 100%;
-    width: 100%;
-    margin: 300px auto;
-    position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 300px auto;
+  position: absolute;
+}
 
-    @include loader;
-    
-    
-}**/
+.sectionLoader .loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-left-color: #99E2D0;
+  border-right-color: #99E2D0;
+  vertical-align: middle;
+  -webkit-animation: spin 1s linear infinite, fadeOut 5s forwards;
+          animation: spin 1s linear infinite, fadeOut 5s forwards;
+}
+
+.sectionLoader .loader:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  -webkit-animation: spin 2s linear infinite, fadeOut 5s forwards;
+          animation: spin 2s linear infinite, fadeOut 5s forwards;
+}
+
+.sectionLoader .loader:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  -webkit-animation: spin 1s linear infinite, fadeOut 5s forwards;
+          animation: spin 1s linear infinite, fadeOut 5s forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 /*************** Header *****************/
 header {
   -webkit-box-shadow: 0 2px 3px 1px rgba(196, 196, 196, 0.541);
@@ -248,7 +352,6 @@ header img {
 }
 
 #restaurants .resto .banImg .like:hover {
-  /** @include coeur; **/
   cursor: pointer;
   opacity: 1;
 }
